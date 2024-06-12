@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>To-Do</title>
+</head>
+<body>
+
+    <div class="To-Do-container">
+        <div class="Header" >
+            <h1>Thrusday, 6th</h1>
+            <span>June</span>
+        </div>
+        <div class="TaskList">
+            <div class=" Task TaskCompleted">
+                <input class="Check" type="checkbox" checked>
+                <div class="tasklabelContainer">
+                    <label class="tasklabel">Morning Run</label>
+                </div>
+                
+                <!-- <div class="tasklabel hidden">Morning Run</div> -->
+                <div class="time">7:00 AM</div>
+                <i class=" bin fas fa-trash-alt bin-icon"></i>
+            </div>
+            <div class="Task TaskUncomplete">
+                <input class="Check" type="checkbox">
+                <div class="tasklabelContainer">
+                    <label class="tasklabel">Buy Pizza on the way to work and so basically im creating to do app where i solve leetcode problems do </label>
+                </div>
+                <div class="time">8:00 AM</div>
+                <i class="bin fas fa-trash-alt bin-icon"></i>
+            </div>
+        </div>
+        <div class="buttonDiv">
+            <button class="AddTask">+</button>
+        </div>
+        
+
+
+        <script src="script.js"></script>
+    </div>
+    
+</body>
+</html>

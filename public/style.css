@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.To-Do-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px;
+    width: 500px;
+    height: 75%;
+    position: relative;
+}
+
+.Header {
+    padding: 10px;
+    height: fit-content;
+}
+
+.TaskList {
+    overflow-y: auto;
+    flex: 1;
+}
+
+.TaskList::-webkit-scrollbar {
+    display: none;
+/* position: relative; */
+}
+
+.Task {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Check,.time,.bin{
+    /* position: fixed; */
+    flex-shrink: 0;
+}
+/* .time{
+    position: sticky;
+
+}
+.bin{
+    position: sticky;
+
+} */
+
+.tasklabelContainer{
+    position: sticky;
+    perspective: 300px;
+}
+
+
+
+
+.tasklabel {
+    display: block;
+    background-color: white;
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transition: transform 0.3s ease, width 0.3s ease;
+    }
+    
+.tasklabel:hover  {
+    display: block;
+    position: relative;
+    white-space: nowrap; 
+    text-overflow: inherit;
+    transform: scale(1.1);
+    width: 500px;
+    z-index: 1;
+}  
+
+
+
+
+
+
+
+/* .tasklabel {
+
+    background-color: white;
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transition: transform 0.3s ease, width 0.3s ease;
+    }
+    
+.tasklabel:hover  {
+    position: absolute;
+    white-space: nowrap; 
+    text-overflow: inherit;
+    transform: scale(1.1);
+    width: auto;
+    z-index: 1;
+} */
+.tasklabel:hover + .hidden{
+    visibility: hidden;
+}
+
+.buttonDiv {
+    position: absolute;
+    bottom: 0;
+    width: 540px;
+    margin: 0 0 0 -20px; /* Negate parent's padding */
+}
