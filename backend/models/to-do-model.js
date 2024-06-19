@@ -3,7 +3,7 @@ import mongoose, {Schema, model} from "mongoose";
 const toDoSchema= new Schema({
     tittle:String,
     description: String,
-    id:String
+    completed:Boolean
 })
 
 const ToDos = new model("ToDo",toDoSchema );

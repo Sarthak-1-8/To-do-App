@@ -11,7 +11,8 @@ const port= process.env.PORT || 8080;
 
 app.use(express.json());
 
-app.use("//api/todos",toDoRoutes);
+const user=localStorage.getItem(username) || "prashasst";
+app.use(`${user}/`,toDoRoutes);
 
 
 

@@ -21,7 +21,8 @@ export const generateJWT= async (req, res, next)=>{
     const {username, type} = req.body()
     try{
         const token = await signJWT({username,type});
-        localStorage.setItem(authorization,token)
+        localStorage.setItem("authorization",token)
+        localStorage.setItem("username",username)
         next();
     }
     catch(err){
