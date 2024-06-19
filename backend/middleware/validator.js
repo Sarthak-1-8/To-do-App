@@ -1,4 +1,4 @@
-import { createTask, updateTask } from '../validation/to-do-schema';
+import { createTask, updateTask } from '../validation/to-do-validation';
 
 //Creating a validator middleware fro routes
 

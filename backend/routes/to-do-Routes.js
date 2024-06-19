@@ -1,6 +1,6 @@
 import express from 'express';
 import { safeCreateTask,safeUpdateTask } from '../middleware/validator';
-import { updateTask } from '../validation/to-do-schema';
+import { toDos } from '../models/to-do-model';
 
  const router= express.Router();
  
@@ -18,6 +18,7 @@ router.get("/All-task",(req, res)=>{
 });
 
 router.post("/create-task",safeCreateTask,(req,res)=>{
+    const {tittle , description} = req.body;
     console.log("TaskCreated")
 
 });
