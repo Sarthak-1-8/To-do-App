@@ -26,8 +26,10 @@ body {
 }
 
 .TaskList {
-    overflow-y: auto;
+    /* overflow-y: auto; */
     flex: 1;
+    /* border: 2px solid black; */
+    
 }
 
 .TaskList::-webkit-scrollbar {
@@ -54,7 +56,12 @@ body {
 } */
 
 .tasklabelContainer{
-    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* border: 2px solid black; */
+
     perspective: 300px;
 }
 
@@ -62,23 +69,28 @@ body {
 
 
 .tasklabel {
+    
+    /* border: 2px solid black; */
     display: block;
     background-color: white;
-    width: 200px;
+    width: auto;
     overflow: hidden;
+    /* text-overflow: ellipsis; */
+    /* overflow: hidden; */
     white-space: nowrap;
     text-overflow: ellipsis;
     transition: transform 0.3s ease, width 0.3s ease;
     }
     
 .tasklabel:hover  {
-    display: block;
-    position: relative;
+    text-align: center;
+    /* display: block; */
+    /* position: relative; */
     white-space: nowrap; 
-    text-overflow: inherit;
-    transform: scale(1.1);
-    width: 500px;
-    z-index: 1;
+    /* text-overflow: inherit; */
+    transform: scale(1.3);
+    width: auto;
+    z-index: 10;
 }  
 
 

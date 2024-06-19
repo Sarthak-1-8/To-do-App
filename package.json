@@ -1,0 +1,18 @@
+{
+  "name": "to-do-app",
+  "version": "1.0.0",
+  "description": "This is no ordinary to-do app it's built using React for the frontend and Node.js with Express for the backend. It allows users to create, read, update, and delete tasks. User authentication is implemented using JWT (JSON Web Tokens), and data is stored in a MongoDB database. Input validation is handled using Zod, and backend calls are debounced to optimize performance.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
+  },
+  "author": "Prashasst Dongre",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "zod": "^3.23.8"
+  }
+}
