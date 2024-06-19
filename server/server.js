@@ -1,5 +1,6 @@
 import express from 'express'
 import toDoRoutes from '../backend/routes/to-do-Routes.js'
+import connectDB from '../backend/config/db.js';
 
 import dotenv from 'dotenv'
 dotenv.config();
@@ -17,15 +18,19 @@ app.use("//api/todos",toDoRoutes);
 
 
 
+//Servert Start
 
+const startServer= async ()=>{
+    try{
+        await connectDB();
+        app.listen(port,()=>{
+            console.log("Server Started")
+        });
+    }
+    catch(err){
+        console.log("Failed to start Server")
+    }
+}
 
+startServer();
 
-
-
-
-
-
-app.listen(port,()=>{
-    console.log("Server Started")
-
-});

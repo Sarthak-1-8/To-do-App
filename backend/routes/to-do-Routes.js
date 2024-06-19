@@ -1,6 +1,6 @@
 import express from 'express';
-import { safeCreateTask,safeUpdateTask } from '../middleware/validator';
-import { toDos } from '../models/to-do-model';
+import { safeCreateTask,safeUpdateTask } from '../middleware/validator-Middleware.js';  //ZOD
+import { createToDo } from '../models/to-do-model.js';                                  //Mongoose, MongoDB
 
  const router= express.Router();
  
@@ -17,9 +17,24 @@ router.get("/All-task",(req, res)=>{
     });
 });
 
-router.post("/create-task",safeCreateTask,(req,res)=>{
-    const {tittle , description} = req.body;
-    console.log("TaskCreated")
+router.post("/create-task",safeCreateTask,async (req,res)=>{
+    const task = req.body;
+    try{
+        await createToDo(task);
+        res.status(200).json({
+            msg:"Task-Added"
+        })
+        console.log("TaskCreated")
+    }
+    catch(err){
+        console.error("Failed to Create new task",err)
+        res.status(401).json({
+            msg:"Failed to Create new task ",
+            error:err
+        })
+
+    }
+
 
 });
 
